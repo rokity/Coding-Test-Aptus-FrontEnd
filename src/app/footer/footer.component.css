@@ -1,0 +1,36 @@
+.block {
+    display: inline-block;
+    margin-left: 4px;
+    color: white;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+  }
+  
+  .green {
+    background-color: rgb(95, 231, 108);
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .gray {
+    background-color: gray;
+  }
+
+
+  .footer {
+    border: 1px solid transparent;
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+  }
+  
+  .footer-content {
+    display: table;
+    margin: 0 auto;
+    border: 1px solid transparent;
+  }
+  
+  

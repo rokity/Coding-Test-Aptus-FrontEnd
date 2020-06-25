@@ -1,0 +1,31 @@
+<div class="content" role="main">
+  <div class="card" #card>
+    <div class="head">
+      <app-entity *ngFor="let entity of this.entities;let i = index;" [entity]="entity" [index]="i+1"
+        (click)="selectEntity(i+1)"></app-entity>
+    </div>
+    <div class="container">
+      <input #textinput class="text-input" [value]="this.currentText.text"
+        [style.width.ch]="this.currentText.text.length">
+      <input #beforelectedtextbutton class="text-input hidden" [value]="this.beforeSelectedTextButtonValue"
+        [style.width.ch]="this.beforeSelectedTextButtonValue.length-2.5">
+      <button #selectedtextbutton class="hidden selected-button active"
+        [value]="this.selectedTextValue">{{this.selectedTextValue}}
+        <span class="selected-button-entity">
+          {{this.entitySelectedValue}}</span>
+      </button>
+      <input #afterselectedtextbutton class="text-input hidden" [value]="this.afterSelectedTextButtonValue"
+        [style.width.ch]="this.afterSelectedTextButtonValue.length">
+    </div>
+    <div class="bottom">
+      <div class="content-bottom">
+        <h3>SOURCE: {{this.currentText.source}}</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
+
+<router-outlet></router-outlet>
